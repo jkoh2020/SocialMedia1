@@ -246,6 +246,20 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocialMedia.Data\SocialMedia.Data.csproj">
+      <Project>{5db5acce-3e1d-48b3-b9b8-2f742b991ee8}</Project>
+      <Name>SocialMedia.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialMedia.Models\SocialMedia.Models.csproj">
+      <Project>{fe527607-7678-476d-bc13-004dcda63b0f}</Project>
+      <Name>SocialMedia.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialMedia.Services\SocialMedia.Services.csproj">
+      <Project>{b39e92a4-f7c5-4c2e-9388-752e601f25e2}</Project>
+      <Name>SocialMedia.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
