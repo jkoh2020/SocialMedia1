@@ -10,7 +10,7 @@ namespace SocialMedia.Data
    public class Like
     {
         public Post LikedPost { get; set; }
-        [Required]
+        
         public Guid Liker { get; set; }
     }
 }

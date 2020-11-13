@@ -8,15 +8,13 @@ using System.Web.Http;
 
 namespace SocialMedia.Models
 {
-    
+    // Properties will show up in the view   
     public class GetPosts
     {
-        private readonly ApplicationDbContext _context = new ApplicationDbContext();
-        [HttpGet]
-        public async Task<IHttpActionResult> GetAllPost()
-        {
-            List<Post> posts = await _context.Posts.ToListAsync();
-            return Ok(posts);
-        }
+      public int Id { get; set; }
+      public string Title { get; set; }
+      public string Text { get; set; }
+      public Guid Author { get; set; }
+
     }
 }

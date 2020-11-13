@@ -12,27 +12,14 @@ namespace SocialMedia.Models
 {
    public class PostAPost
     {
-        private readonly ApplicationDbContext _context = new ApplicationDbContext();
+        // Validation for the post properties
+        
         [Required]
+        [MinLength(2, ErrorMessage ="Please enter at least 2 characters.")]
+        [MaxLength(120, ErrorMessage ="There are too many characters in this title field")]
         public string Title { get; set; }
-        [Required]
+        [MaxLength(5000)]
         public string Text { get; set; }
-
-        // Create
-        [HttpPost]
-        public async Task<IHttpActionResult> Create(Post post)
-        {
-            
-            if (ModelState.IsValid)
-            {
-                _context.Posts.Add(post);
-                await _context.SaveChangesAsync();
-                return Ok;
-            }
-
-            return BadRequest(ModelState); // 400
-        }
-
     }
 
     

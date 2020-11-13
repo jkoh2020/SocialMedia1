@@ -8,5 +8,7 @@ namespace SocialMedia.Models
 {
    public class PostAReplyToAComment
     {
+        public string Text { get; set; }
+        public Guid Author { get; set; }
     }
 }
